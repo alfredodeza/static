@@ -10,5 +10,12 @@ pipeline {
                 '''
             }
         }
+        stage('Run in AWS') {
+            steps {
+                withAWS(credentials:'aws-static') {
+		    sh 'echo "Hello World with AWS creds"'
+                }
+            }
+        }
     }
 }
