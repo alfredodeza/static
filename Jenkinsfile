@@ -17,6 +17,7 @@ pipeline {
             steps {
                 withAWS(credentials:'aws-static') {
 		    sh 'echo "Hello World with AWS creds"'
+                    s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'static')
                 }
             }
         }
