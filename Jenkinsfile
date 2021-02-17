@@ -8,10 +8,7 @@ pipeline {
         }
         stage('Upload to AWS') {
             steps {
-          
 		    sh 'echo "Hello World with AWS creds"'
-                 
-                
             }
         }
     }
