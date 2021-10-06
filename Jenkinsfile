@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Echo hello world') {
             steps {
-		    sh 'echo "Hello World with AWS creds"'
+		    sh 'echo "Hello World with AWS"'
             }
         }
     }
